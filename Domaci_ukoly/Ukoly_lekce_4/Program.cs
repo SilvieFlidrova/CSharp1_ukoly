@@ -20,8 +20,35 @@
             {
                 Console.WriteLine(i);
             }
+
+
+            //3) Napiš program, který si bude myslet náhodné číslo od 0 do 10 a uživatel bude moci až 3x hádat.
+            //Pokud uhodne, program skončí dříve a vypíše, že číslo uhodl správně.
+            //Pro generování náhodného čísla lze použít
+            //            Random generator = new Random();
+            //            int nahodneCislo = generator.Next(11);
+
+            
+            Random generator = new Random();
+            int nahodneCislo = generator.Next(11);
+            Console.WriteLine("Myslím si přirozené číslo, zkus ho uhádnout. Máš na to tři pokusy.");
+                                            
+            for (int i = 1; i < 4; i++)
+            {
+                Console.WriteLine($"tvůj {i}. tip:");
+                string zadanyTipUzivatele = Console.ReadLine();
+                int tipUzivatele = int.Parse(zadanyTipUzivatele);                             
+                
+                if (nahodneCislo == tipUzivatele)
+                {
+                    Console.WriteLine($"výborně, uhádl jsi na {i}. pokus");
+                    break;
+                }
+                Console.WriteLine("bohužel jsi neuhádl");
+            }
             
 
+         
 
 
             Console.ReadLine();
