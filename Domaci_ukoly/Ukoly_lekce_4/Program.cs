@@ -128,6 +128,50 @@
                 }
                 Console.WriteLine($"největší ze zadaných čísel je číclo {cislo1}.");
             }
+
+            // 7) Vypiš čísla Fibonacciho posloupnosti.
+
+            // Fibonacciho posloupnost, je nekonečná posloupnost čísel, která začíná čísly 1, 0. Každé další číslo je potom součet dvou předchozích.
+            //         0
+            //         1
+            // 0 + 1 = 2
+            // 1 + 2 = 3
+            // 2 + 3 = 5
+            // 3 + 5 = 8
+
+            // Načti od uživatele int hodnotu, která reprezentuje množství čísel kolik se má z Fibbonacciho posloupnosti vypsat.
+            // Uživatle zadá:
+            //     0 - Nevypíše se nic.
+            //     1 - Vypíše se 0
+            //     4 - Vypíše se 0, 1, 1, 2
+
+            // Vypisovat můžete buďto na řádek nebo pod sebe. Jak uznáte za vhodné.
+
+            
+             Console.WriteLine("zadej, kolik čísel Fibonacciho posloupnosti mám vypsat");
+
+             string pozadovanyPocetCisel = Console.ReadLine();
+             int pocetCiselFP = int.Parse(pozadovanyPocetCisel);
+
+             int a = 0;
+
+             int prvniCislo = 0;
+             int druheCislo = 1;
+             int dalsiCislo;
+
+             while (true)
+             {
+                 Console.Write($"{prvniCislo} ");
+                 dalsiCislo = prvniCislo + druheCislo;
+                 prvniCislo = druheCislo;
+                 druheCislo = dalsiCislo;
+                 a++;
+
+                 if(a==pocetCiselFP)
+                 {
+                     break;
+                 }
+             }
             
          
 
