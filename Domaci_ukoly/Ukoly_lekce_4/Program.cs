@@ -97,9 +97,39 @@
 
               }
               Console.WriteLine($"Faktoriál čísla {cislo} je {faktorial}");
+
+
+            // 6) Najdi největší uživatelem zadané číslo.
+
+            // Načítej od uživatele čísla v cyklu, tak dlouho dokud nezadá 0.
+            // Po tom co zadá 0 skončí cyklus a vypiš největší číslo, které zadal.
+            // Poslední zadanou 0 nepočítej do zadaných čísel.
+            // Pokud zadá -4, -2, -8, 0 tak výsledek bude -2
+            // Pokud zadá 1, 2, 3, 4, 0 tak výsledek bude 4
+
             
+            Console.WriteLine("zadávej postupně celá čísla, jakmile zadáš nulu, vyhodnotím největší z nich:");
 
+            int cislo1 = int.MinValue;
+            string zadaneCilso = Console.ReadLine();
+            int cislo2 = int.Parse(zadaneCilso);
 
+            if (cislo2 == 0)
+            {
+                Console.WriteLine("konec programu");
+            }
+            else
+            {
+                while (cislo2 != 0)
+                {
+                    cislo1 = Math.Max(cislo1, cislo2);
+                    string dalsiZadaneCilso = Console.ReadLine();
+                    cislo2 = int.Parse(dalsiZadaneCilso);
+                }
+                Console.WriteLine($"největší ze zadaných čísel je číclo {cislo1}.");
+            }
+            
+         
 
 
 
