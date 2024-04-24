@@ -67,7 +67,38 @@
                             Console.WriteLine();
 
                         }
+
+
+            // 5) Vypočti faktoriál uživatelem zadaného čísla.
+            // Uživatel zadá kladné celé číslo. Nemusíš dělat žádnou validaci vstupu.
+            // Spočti faktoriál tohoto čísla podle následujícího vzorce.
+
+            // 5! = 1 * 2 * 3 * 4 * 5 = 120
+            // 4! = 1 * 2 * 3 * 4 = 24
+            // 3! = 1 * 2 * 3 = 6
+            // 2! = 1 * 2 = 2
+            // 1! = 1
+            // 0! = 1 Pozor faktoriál 0 se rovná 1
+
+            // ## BONUS: Zkus bez použití podmínek. Použij pouze for cyklus.
+
             
+              Console.WriteLine("zadej číslo pro výpočet faktoriálu");
+
+              string zadaneCislo = Console.ReadLine();
+              int cislo = int.Parse(zadaneCislo);
+
+              int faktorial = 1;
+
+              for (int i = 1; i <= cislo; i++)
+              {
+
+                  faktorial = faktorial * i;
+
+              }
+              Console.WriteLine($"Faktoriál čísla {cislo} je {faktorial}");
+            
+
 
 
 
