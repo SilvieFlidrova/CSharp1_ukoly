@@ -46,9 +46,33 @@
                 }
                 Console.WriteLine("bohužel jsi neuhádl");
             }
+
+
+            //4) Zobrazte trojúhelník z hvězdiček(budete muset použít cyklus v cyklu)
+
+           
+                        Console.WriteLine("zadej počet pater:");
+                        string zadanyPocetPater = Console.ReadLine();
+                        int pocetPater = int.Parse(zadanyPocetPater);
+
+
+                        for (int i = 1; i <= pocetPater; i++)
+                        {
+                            int pocetHvezdicek = i;
+
+                            for (int j = 1; j <= pocetHvezdicek; j++)
+                            {
+                                Console.Write("*");
+                            }
+                            Console.WriteLine();
+
+                        }
             
 
-         
+
+
+
+
 
 
             Console.ReadLine();
