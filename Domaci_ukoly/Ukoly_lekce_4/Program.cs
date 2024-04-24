@@ -1,6 +1,6 @@
 ﻿namespace Ukoly_lekce_4
 {
-   
+
     internal class Program
     {
         static void Main(string[] args)
@@ -8,14 +8,14 @@
             Console.WriteLine("Ukoly z lekce4!");
 
             //1) Pomocí cyklu vypiš 3x nějakou stejnou zprávu
-           
+
             for (int i = 0; i < 3; i++)
             {
                 Console.WriteLine("Ahoj, přeji Ti krásný den a samé šikovné studenty");
             }
 
             //2) Pomocí cyklu vypiš čísla 5 až 1 sestupně.
-            
+
             for (int i = 5; i > 0; i--)
             {
                 Console.WriteLine(i);
@@ -28,17 +28,17 @@
             //            Random generator = new Random();
             //            int nahodneCislo = generator.Next(11);
 
-            
+
             Random generator = new Random();
             int nahodneCislo = generator.Next(11);
             Console.WriteLine("Myslím si přirozené číslo, zkus ho uhádnout. Máš na to tři pokusy.");
-                                            
+
             for (int i = 1; i < 4; i++)
             {
                 Console.WriteLine($"tvůj {i}. tip:");
                 string zadanyTipUzivatele = Console.ReadLine();
-                int tipUzivatele = int.Parse(zadanyTipUzivatele);                             
-                
+                int tipUzivatele = int.Parse(zadanyTipUzivatele);
+
                 if (nahodneCislo == tipUzivatele)
                 {
                     Console.WriteLine($"výborně, uhádl jsi na {i}. pokus");
@@ -50,23 +50,23 @@
 
             //4) Zobrazte trojúhelník z hvězdiček(budete muset použít cyklus v cyklu)
 
-           
-                        Console.WriteLine("zadej počet pater:");
-                        string zadanyPocetPater = Console.ReadLine();
-                        int pocetPater = int.Parse(zadanyPocetPater);
+
+            Console.WriteLine("zadej počet pater:");
+            string zadanyPocetPater = Console.ReadLine();
+            int pocetPater = int.Parse(zadanyPocetPater);
 
 
-                        for (int i = 1; i <= pocetPater; i++)
-                        {
-                            int pocetHvezdicek = i;
+            for (int i = 1; i <= pocetPater; i++)
+            {
+                int pocetHvezdicek = i;
 
-                            for (int j = 1; j <= pocetHvezdicek; j++)
-                            {
-                                Console.Write("*");
-                            }
-                            Console.WriteLine();
+                for (int j = 1; j <= pocetHvezdicek; j++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
 
-                        }
+            }
 
 
             // 5) Vypočti faktoriál uživatelem zadaného čísla.
@@ -82,21 +82,21 @@
 
             // ## BONUS: Zkus bez použití podmínek. Použij pouze for cyklus.
 
-            
-              Console.WriteLine("zadej číslo pro výpočet faktoriálu");
 
-              string zadaneCislo = Console.ReadLine();
-              int cislo = int.Parse(zadaneCislo);
+            Console.WriteLine("zadej číslo pro výpočet faktoriálu");
 
-              int faktorial = 1;
+            string zadaneCislo = Console.ReadLine();
+            int cislo = int.Parse(zadaneCislo);
 
-              for (int i = 1; i <= cislo; i++)
-              {
+            int faktorial = 1;
 
-                  faktorial = faktorial * i;
+            for (int i = 1; i <= cislo; i++)
+            {
 
-              }
-              Console.WriteLine($"Faktoriál čísla {cislo} je {faktorial}");
+                faktorial = faktorial * i;
+
+            }
+            Console.WriteLine($"Faktoriál čísla {cislo} je {faktorial}");
 
 
             // 6) Najdi největší uživatelem zadané číslo.
@@ -107,7 +107,7 @@
             // Pokud zadá -4, -2, -8, 0 tak výsledek bude -2
             // Pokud zadá 1, 2, 3, 4, 0 tak výsledek bude 4
 
-            
+
             Console.WriteLine("zadávej postupně celá čísla, jakmile zadáš nulu, vyhodnotím největší z nich:");
 
             int cislo1 = int.MinValue;
@@ -147,46 +147,62 @@
 
             // Vypisovat můžete buďto na řádek nebo pod sebe. Jak uznáte za vhodné.
 
-            
-             Console.WriteLine("zadej, kolik čísel Fibonacciho posloupnosti mám vypsat");
 
-             string pozadovanyPocetCisel = Console.ReadLine();
-             int pocetCiselFP = int.Parse(pozadovanyPocetCisel);
+            Console.WriteLine("zadej, kolik čísel Fibonacciho posloupnosti mám vypsat");
 
-             int a = 0;
+            string pozadovanyPocetCisel = Console.ReadLine();
+            int pocetCiselFP = int.Parse(pozadovanyPocetCisel);
 
-             int prvniCislo = 0;
-             int druheCislo = 1;
-             int dalsiCislo;
+            int a = 0;
 
-             while (true)
-             {
-                 Console.Write($"{prvniCislo} ");
-                 dalsiCislo = prvniCislo + druheCislo;
-                 prvniCislo = druheCislo;
-                 druheCislo = dalsiCislo;
-                 a++;
+            int prvniCislo = 0;
+            int druheCislo = 1;
+            int dalsiCislo;
 
-                 if(a==pocetCiselFP)
-                 {
-                     break;
-                 }
-             }
-            
-         
+            while (true)
+            {
+                Console.Write($"{prvniCislo} ");
+                dalsiCislo = prvniCislo + druheCislo;
+                prvniCislo = druheCislo;
+                druheCislo = dalsiCislo;
+                a++;
 
+                if (a == pocetCiselFP)
+                {
+                    break;
+                }
+            }
 
+            // druhý pokus FP
 
+            Console.WriteLine("zadej, kolik čísel Fibonacciho posloupnosti mám vypsat");
 
+            string tebouPozadovanyPocetCisel = Console.ReadLine();
+            int tvujPocetCiselFP = int.Parse(tebouPozadovanyPocetCisel);
 
+            int prvniCisloFB = 0;
+            int druheCisloFB = 1;
+            int dalsiCisloFB;
+
+            for (int i = 0; i < pocetCiselFP; i++)
+            {
+                Console.Write($"{prvniCislo} ");
+                dalsiCisloFB = prvniCisloFB + druheCisloFB;
+                prvniCisloFB = druheCisloFB;
+                druheCisloFB = dalsiCisloFB;
+            }
 
             Console.ReadLine();
-            Console.WriteLine("konec programu");
+            Console.WriteLine("Konec programu");
         }
+
     }
 }
-      
-       
+          
+
+
+
+
 
 
                
